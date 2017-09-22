@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Lobster', cursive;
+  background-color: rgb(250, 197, 155)
+}
+.casilla{
+  border: 2px solid #333;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 2px;
+  cursor: pointer;
+}
+
+h1{
+  color:#007bff;
+}
+/*Para dar margen superior*/
+.main-container{
+  margin-top: 20px;
+}
+
+/*quitar los bordes*/
+
+.row:first-child .casilla{
+  border-top: 0px !important;
+}
+
+.row:last-child .casilla{
+  border-bottom:0px !important;
+}
+
+.row .casilla:first-child {
+  border-left: 0px !important;
+}
+
+.row .casilla:last-child {
+  border-right:  0px !important;
+}
+
+.endgame{
+  color: rgb(201, 230, 229);
+  height: 100px;
+  width: 300px;
+  background-color: rgb(0, 123, 255);
+  position:absolute;
+  top: 232px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  padding: 10px;
+  }
+  .textoInicio{
+    vertical-align: middle;
+    position:relative;
+    margin-top: 10px;
+  }
+
+.dibujo{
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+
+/*Animaciones*/
+
+.animated {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

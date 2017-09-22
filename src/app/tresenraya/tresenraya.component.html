@@ -1,0 +1,179 @@
+<div class="container-fluid main-container text-center">
+  <h1>Tres en raya</h1>
+  <h6>Para comenzar a jugar elige X (empiezas tú) o O (empieza el PC)</h6>
+  <h1 *ngIf="quienGana == 'humano'"> Has ganado!</h1>
+  <h1 *ngIf="quienGana == 'computer'"> Gana el PC!</h1>
+  <h1 *ngIf="quienGana == 'empate'"> Empate</h1>
+
+<div class="container-fluid main-container">
+  <div class="row justify-content-center">
+    <div (click)="marcar(0)" class="col casilla animated fadeIn" id="0">
+
+      <div *ngIf="(humanArr.indexOf(0)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(0)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(0)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(0)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+
+    </div>
+    <div (click)="marcar(1)" class="col casilla animated fadeIn" id="1">
+
+      <div *ngIf="(humanArr.indexOf(1)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(1)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(1)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(1)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+
+    <div (click)="marcar(2)" class="col casilla animated fadeIn" id="2">
+
+      <div *ngIf="(humanArr.indexOf(2)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(2)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(2)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(2)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+
+    <div  (click)="marcar(3)" class="col casilla animated fadeIn" id="3">
+
+      <div *ngIf="(humanArr.indexOf(3)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(3)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(3)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(3)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+
+    </div>
+
+    <div (click)="marcar(4)" class="col casilla animated fadeIn" id="4">
+
+      <div *ngIf="(humanArr.indexOf(4)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(4)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(4)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(4)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+    <div (click)="marcar(5)" class="col casilla animated fadeIn" id="5">
+
+      <div *ngIf="(humanArr.indexOf(5)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(5)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(5)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(5)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div (click)="marcar(6)" class="col casilla animated fadeIn" id="6">
+
+      <div *ngIf="(humanArr.indexOf(6)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(6)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(6)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(6)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+    <div (click)="marcar(7)" class="col casilla animated fadeIn" id="7">
+
+      <div *ngIf="(humanArr.indexOf(7)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(7)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(7)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(7)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+    <div (click)="marcar(8)" class="col casilla animated fadeIn" id="8">
+
+      <div *ngIf="(humanArr.indexOf(8)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>X</h3>
+      </div>
+      <div *ngIf="(humanArr.indexOf(8)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated fast">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(8)!=-1)&&empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>O</h3>
+      </div>
+      <div *ngIf="(computerArr.indexOf(8)!=-1)&&!empiezaHumano"class="align-self-center dibujo fadeIn animated">
+        <h3>X</h3>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+<div class="endgame" *ngIf="!start">
+<h3 class="textoInicio">Escoge X o O para empezar el juego </h3>
+</div>
+<br><br>
+<div class="" *ngIf="start">
+  <h3>Que empiece el juego! Suerte!</h3>
+</div>
+<button (click)="empezarHuman()"
+type="button" name="button" class="btn btn-primary">Jugar como X</button>
+<button (click)="empezarPC()"
+type="button" name="button" class="btn btn-primary">Jugar como O</button>
+</div>
+<br>
+<footer id="footer" class="text-center">
+  <div class="container">
+    Designed & Coded by
+    <a href="https://www.freecodecamp.org/danyjaen" target="_blank">
+        Daniel Lopez</a>
+  </div>
+</footer>
